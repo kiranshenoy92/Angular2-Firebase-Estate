@@ -1,0 +1,43 @@
+<form (submit)="submit()">
+            <div *ngIf="title" class="col-md-5 col-lg-5 col-sm-12">
+                <div class="form-group">
+                    <label for="title" class="control-label">TITLE</label>
+                    <input type="text" class="form-control" id="title" [(ngModel)]="title" name="title" placeholder="Title" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="city" class="control-label">CITY</label>
+                    <input type="text" class="form-control" id="city" [(ngModel)]="city" name="city" placeholder="City" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="owner" class="control-label">OWNER</label>
+                    <input type="text" class="form-control" id="owner" [(ngModel)]="owner" name="owner" placeholder="Owner" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="bedrooms" class="control-label">BEDROOMS</label>
+                    <input type="number" class="form-control" id="bedrooms" [(ngModel)]="bedrooms" name="bedrooms" placeholder="bedrooms" min="1" required>
+                </div>
+                <div class="form-group">
+                    <label for="type" class="control-label">TYPE</label>
+                    <select class="form-control" [(ngModel)]="type" name="type" required> 
+                      <option value="Estate">Estate</option>
+                      <option value="Estate">Estate</option>
+                      <option value="Appatment">Appatment</option>
+                    </select>
+                </div>  
+
+                <div class="form-group">
+                    <label for="price" class="control-label">PRICE</label>
+                    <input type="number" class="form-control" id="price" [(ngModel)]="price" name="price" placeholder="Price" min="1" required>
+                </div>
+
+                <div class="form-group">
+                    <button type="submit" class="btn btn-primary pull-right">ADD</button>
+                </div>
+                <div class="form-group">
+                    <button type="reset" class="btn btn-warning pull-left">RESET</button>
+                </div>
+            </div>
+</form>
